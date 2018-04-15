@@ -1,0 +1,44 @@
+{
+  "name": "graphql-api-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyhsa93/graphql-api-starter.git"
+  },
+  "author": "kyhsa93",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kyhsa93/graphql-api-starter/issues"
+  },
+  "homepage": "https://github.com/kyhsa93/graphql-api-starter#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.3",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-watch": "^2.0.7",
+    "compression": "^1.7.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "eslint-plugin-import": "^2.11.0",
+    "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
+    "graphql": "^0.13.2",
+    "jsdoc": "^3.5.5",
+    "jsonwebtoken": "^8.2.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "sequelize": "^4.37.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "jsdoc -c jsdoc.conf",
+    "lint": "eslint --fix index.js src",
+    "watch": "babel-watch --watch src index.js",
+    "build": "babel index.js -d lib && babel src -d lib/src",
+    "start": "npm run build && node ./lib/index.js"
+  }
+}
